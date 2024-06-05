@@ -1,0 +1,43 @@
+body{
+    text-align:center;
+}
+img{
+    width: 300px;
+    margin-top: 50px;
+
+}
+#togglebtn{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+}
+#btn{
+    background-color: darkgrey;
+    width: 100px;
+    height: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+}
+#btn::before{
+    position: absolute;
+    content: "";
+    margin: 5px;
+    width: 40px;
+    margin-left: -45px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    transition: 0.2s;
+}
+#check:checked + #btn{
+    background-color: yellow;
+}
+#check:checked + #btn::before{
+    transform: translateX(50px);
+}
+#check{
+    display: none;
+}
